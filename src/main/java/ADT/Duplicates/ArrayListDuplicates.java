@@ -6,7 +6,7 @@ public class ArrayListDuplicates {
     /**
      *
      * Return an ArrayList of duplicates in an ArrayList
-     * @param arr           ArrayList og Integers to find the duplicates in
+     * @param arr           ArrayList of Integers to find the duplicates in
      * @return              An ArrayList of integers that has all the integers that are repeated in arr
      */
     public ArrayList<Integer> printDuplicates(ArrayList<Integer> arr) {
