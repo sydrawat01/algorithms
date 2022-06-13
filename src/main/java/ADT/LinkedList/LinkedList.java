@@ -144,7 +144,7 @@ public class LinkedList {
     public int middleElement(Node head) {
         Node slow = head;
         Node fast = head;
-        while (slow != null && fast != null) {
+        while (slow.getNext() != null && fast.getNext() != null) {
             fast = fast.getNext().getNext();
             slow = slow.getNext();
         }
