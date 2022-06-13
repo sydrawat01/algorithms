@@ -81,7 +81,7 @@ public class LinkedList<Item> implements LinkedListAPI<Item> {
     public Item middle(Node<Item> head) {
         Node<Item> fast = head;
         Node<Item> slow = head;
-        while(slow.next != null && fast.next != null) {
+        while(slow.next != null && fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
@@ -89,8 +89,18 @@ public class LinkedList<Item> implements LinkedListAPI<Item> {
     }
 
     public boolean cycle(Node<Item> head) {
-        //FIXME: Floyd's cycle detection algorithm
-        return false;
+        // Floyd's cycle detection algorithm
+        Node<Item> slow = head, fast = head;
+        int flag = 0;
+        while(slow != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                flag = 1;
+                break;
+            }
+        }
+        return flag == 1;
     }
 
     public boolean isEmpty() { return head == null; }
