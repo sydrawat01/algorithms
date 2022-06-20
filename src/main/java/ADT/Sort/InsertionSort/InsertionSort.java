@@ -1,4 +1,4 @@
-package ADT.InsertionSort;
+package ADT.Sort.InsertionSort;
 
 public class InsertionSort {
     /**
