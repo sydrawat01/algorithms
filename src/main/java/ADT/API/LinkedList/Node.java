@@ -1,4 +1,4 @@
-package ADT.API;
+package ADT.API.LinkedList;
 
 import java.util.Objects;
 

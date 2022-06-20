@@ -1,8 +1,7 @@
-package ADT.API;
+package ADT.API.LinkedList;
 
+import ADT.API.APIException;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -33,7 +32,7 @@ public class LinkedListTest {
         res.add(3);
         res.add(2);
         res.add(1);
-        res.remove();
+        Integer x = res.remove();
         assertEquals(res, ll);
     }
 

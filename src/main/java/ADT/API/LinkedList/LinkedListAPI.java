@@ -1,6 +1,9 @@
-package ADT.API;
+package ADT.API.LinkedList;
+
+import ADT.API.APIException;
 
 public interface LinkedListAPI<Item> extends Iterable<Item>, ListAPI<Item> {
+    Item top();
     Node<Item> getHead();
     void insert(Item data);
     void delete(Item value) throws APIException;

@@ -1,4 +1,6 @@
-package ADT.API;
+package ADT.API.LinkedList;
+
+import ADT.API.APIException;
 
 public interface ListAPI<Item> {
     void add(Item data);

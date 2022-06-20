@@ -1,4 +1,6 @@
-package ADT.API;
+package ADT.API.LinkedList;
+
+import ADT.API.APIException;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -106,6 +108,8 @@ public class LinkedList<Item> implements LinkedListAPI<Item> {
     public boolean isEmpty() { return head == null; }
 
     public Node<Item> getHead() { return isEmpty() ? null : head; }
+
+    public Item top() { return isEmpty() ? null : head.data; }
 
     private Iterable<Item> asItemIterable() {
         Collection<Item> result = new ArrayList<>();
