@@ -2,10 +2,7 @@ package ADT.API.Stack;
 
 import ADT.API.APIException;
 import ADT.API.LinkedList.LinkedList;
-import ADT.API.LinkedList.Node;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.Objects;
 
