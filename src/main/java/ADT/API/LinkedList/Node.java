@@ -3,7 +3,7 @@ package ADT.API.LinkedList;
 import java.util.Objects;
 
 public class Node<Item> {
-    Node(Item data) {
+    public Node(Item data) {
         this(data, null);
     }
     Node(Item data, Node<Item> next) {
@@ -23,6 +23,14 @@ public class Node<Item> {
         return Objects.hash(data, next);
     }
 
-    final Item data;
-    Node<Item> next;
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", next=" + next +
+                '}';
+    }
+
+    public final Item data;
+    public Node<Item> next;
 }
