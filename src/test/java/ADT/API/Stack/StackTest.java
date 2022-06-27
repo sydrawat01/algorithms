@@ -16,4 +16,14 @@ public class StackTest {
         stack.push(3);
         System.out.println(stack);
     }
+
+    @Test
+    public void TestCase2() throws APIException {
+        Stack<Integer> stack = new Stack<>();
+        assertTrue(stack.isEmpty());
+        stack.push(1);
+        assertFalse(stack.isEmpty());
+        Integer item = stack.pop();
+        assertEquals(item, new Integer(1));
+    }
 }

@@ -3,6 +3,8 @@ package ADT.API.LinkedList;
 import ADT.API.APIException;
 import org.junit.Test;
 
+import java.util.Iterator;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -112,5 +114,31 @@ public class LinkedListTest {
         ll.insert(3);
         ll.getHead().next.next.next = ll.getHead();
         assertTrue(ll.cycle(ll.getHead()));
+    }
+
+    /**
+     * Test method for LinkedList
+     */
+    @Test
+    public void testLinkedList1() throws APIException {
+        LinkedList<Integer> list = new LinkedList<>();
+        assertTrue(list.isEmpty());
+        list.add(1);
+        assertEquals(new Integer(1), list.top());
+        assertFalse(list.isEmpty());
+        assertEquals(new Integer(1), list.remove());
+    }
+
+    /**
+     * Test method for LinkedList
+     */
+    @Test
+    public void testLinkedList2() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(1);
+        Iterator<Integer> iterator = list.iterator();
+        assertTrue(iterator.hasNext());
+        assertEquals(new Integer(1), iterator.next());
+        assertFalse(iterator.hasNext());
     }
 }
