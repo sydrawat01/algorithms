@@ -44,6 +44,14 @@ public class Bag<Item> implements BagAPI<Item>{
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "Bag{" +
+                "items=" + Arrays.toString(items) +
+                ", count=" + count +
+                '}';
+    }
+
     private Item[] items = null;
     private int count = 0;
 }
