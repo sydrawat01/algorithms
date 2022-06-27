@@ -4,6 +4,15 @@ public class Node {
     public int data;
     private Node next;
 
+    public Node() {
+        // default constructor
+    }
+
+    public Node(int data) {
+        this.data = data;
+        this.setNext(null);
+    }
+
     public Node(int data, Node next) {
         this.data = data;
         this.setNext(next);
