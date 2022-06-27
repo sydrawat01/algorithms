@@ -4,9 +4,10 @@
 
 - [Bubble Sort](./src/main/java/ADT/Sort/BubbleSort)
 - [Insertion Sort](./src/main/java/ADT/Sort/InsertionSort)
-- [Merge Sort](./src/main/java/ADT/Sort/MergeSort)
 - [Selection Sort](./src/main/java/ADT/Sort/SelectionSort)
+- [Merge Sort](./src/main/java/ADT/Sort/MergeSort)
 - [Shell Sort](./src/main/java/ADT/Sort/ShellSort)
+- [Quick Sort](./src/main/java/ADT/Sort/QuickSort)
 
 ## ADT
 
@@ -47,3 +48,5 @@ Long way to go!
 ## Author
 
 [Siddharth Rawat](https://sydrawat.netlify.app)
+
+## [License](./LICENSE)
