@@ -1,32 +1,24 @@
 package ADT.Sort.BubbleSort;
 
-public class BubbleSort {
+import util.Helper;
 
+public class BubbleSort {
+    /**
+     * Implement bubble sort
+     * @param arr the array to be sorted
+     * @return the sorted array
+     */
     public int[] sort(int[] arr) {
         int n = arr.length;
         for(int i=0; i< n-1; i++) {
             for(int j=0; j < n-i-1; j++) {
-                if(arr[j] > arr[j+1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                if(helper.more(arr,j,j+1)) {
+                    helper.swap(arr, j, j+1);
                 }
             }
         }
         return arr;
     }
 
-    private void printArray(int[] arr) {
-        System.out.print("[ ");
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println("]");
-    }
-
-    public static void main(String[] args) {
-        BubbleSort ob = new BubbleSort();
-        int[] arr = { 12, 11, 13, 5, 6 };
-        ob.printArray(ob.sort(arr));
-    }
+    final Helper helper = new Helper();
 }

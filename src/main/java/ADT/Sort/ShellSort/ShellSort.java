@@ -1,5 +1,7 @@
 package ADT.Sort.ShellSort;
 
+import util.Helper;
+
 public class ShellSort {
 
     public int[] sort(int[] a) {
@@ -9,10 +11,8 @@ public class ShellSort {
         while(h>=1) {
             for(int i=h; i<N; i++) {
                 for(int j=i; j>=h; j-=h) {
-                    if(a[j] < a[j-h]) {
-                        int temp = a[j];
-                        a[j] = a[j-h];
-                        a[j-h] = temp;
+                    if(helper.less(a,j, j-h)) {
+                        helper.swap(a,j, j-h);
                     } else {
                         break;
                     }
@@ -23,17 +23,5 @@ public class ShellSort {
         return a;
     }
 
-    private void printArray(int[] arr) {
-        System.out.print("[ ");
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println("]");
-    }
-
-    public static void main(String[] args) {
-        ShellSort ob = new ShellSort();
-        int[] arr = { 12, 11, 13, 5, 6 };
-        ob.printArray(ob.sort(arr));
-    }
+    final Helper helper = new Helper();
 }

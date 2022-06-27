@@ -1,5 +1,7 @@
 package ADT.Sort.MergeSort;
 
+import util.Helper;
+
 public class MergeSort {
 
     private void merge(int[] a, int left, int mid, int right) {
@@ -46,7 +48,7 @@ public class MergeSort {
         }
     }
 
-    public void sort(int[] a, int left, int right) {
+    public int[] sort(int[] a, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;
 
@@ -56,24 +58,8 @@ public class MergeSort {
             //merge the arrays
             merge(a, left, mid, right);
         }
+        return a;
     }
 
-    static void printArray(int[] arr)
-    {
-        for (int j : arr) System.out.print(j + " ");
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        int[] arr = { 12, 11, 13, 5, 6, 7 };
-
-        System.out.println("Given Array");
-        printArray(arr);
-
-        MergeSort ob = new MergeSort();
-        ob.sort(arr, 0, arr.length - 1);
-
-        System.out.println("\nSorted array");
-        printArray(arr);
-    }
+    final Helper helper = new Helper();
 }
