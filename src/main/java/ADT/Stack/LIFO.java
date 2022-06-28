@@ -29,4 +29,10 @@ public interface LIFO {
      * Function that prints all elements in the stack
      */
     void display();
+
+    /**
+     * Function to get the length of the stack
+     * @return integer that represents the length of the stack
+     */
+    int size();
 }

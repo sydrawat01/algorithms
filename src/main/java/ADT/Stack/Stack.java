@@ -2,58 +2,59 @@ package ADT.Stack;
 
 import ADT.LinkedList.Node;
 
+import static org.junit.Assert.assertEquals;
+
 public class Stack implements LIFO {
     Node top;
 
     public Stack() { this.top = null; }
 
     public void push(int data) {
-        Node temp = new Node();
-        temp.data = data;
-        temp.setNext(top);
-        top = temp;
+        Node temp = new Node(data);
+        if (this.top == null)
+            temp.setNext(null);
+        else
+            temp.setNext(this.top);
+        this.top = temp;
     }
 
     public void pop() {
         if(isEmpty())
             return;
-        top = top.getNext();
+        this.top = this.top.getNext();
     }
 
     public int peek() {
         if (!isEmpty())
-            return top.data;
+            return this.top.data;
         else
             return -1; //stack underflow
     }
 
     public boolean isEmpty() {
-        return top == null;
+        return this.top == null;
+    }
+
+    public int size() {
+        if (isEmpty()) return 0;
+        Node temp = this.top;
+        int count = 0;
+        while(temp != null) {
+            count++;
+            temp = temp.getNext();
+        }
+        return count;
     }
 
     public void display() {
         if(isEmpty()) System.exit(1);
         else {
-            Node temp = top;
+            Node temp = this.top;
             while(temp != null) {
                 System.out.printf("%d->", temp.data);
                 temp = temp.getNext();
             }
-            System.out.println("null");
+            System.out.print("\b\b\n");
         }
-    }
-
-    public static void main(String[] args) {
-        Stack ob = new Stack();
-        ob.push(1);
-        ob.push(2);
-        ob.push(3);
-        ob.push(4);
-        ob.display();
-        System.out.println(ob.peek());
-        ob.pop();
-        ob.pop();
-        System.out.println(ob.peek());
-        ob.display();
     }
 }
