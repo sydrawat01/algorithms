@@ -16,12 +16,13 @@
 - [Binary Insertion Sort](./src/main/java/ADT/BinaryInsertion/BinaryInsertionSort.java)
 - [ArrayList Duplicates](./src/main/java/ADT/Duplicates/ArrayListDuplicates.java)
 - [LinkedList](./src/main/java/ADT/LinkedList)
-- [Stack](./src/main/java/ADT/Stack) [WIP]
-- [Queue](./src/main/java/ADT/Queue) [WIP]
+- [Stack](./src/main/java/ADT/Stack)
+- [Queue](./src/main/java/ADT/Queue)
 
 ## APIs
 
-- [Linked List](./src/main/java/ADT/API/LinkedList)
+- [Linked List](./src/main/java/ADT/API/LinkedList/LinkedList.java)
+- [Doubly Linked List](./src/main/java/ADT/API/LinkedList/DList.java) [WIP]
 - [Stack](./src/main/java/ADT/API/Stack)
 - [Queue](./src/main/java/ADT/API/Queue)
 - [Bag](./src/main/java/ADT/API/Bag)

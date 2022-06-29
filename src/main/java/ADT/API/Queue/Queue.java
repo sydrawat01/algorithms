@@ -78,6 +78,5 @@ public class Queue<Item> implements SizedIterable<Item>, QueueAPI<Item> {
         }
 
         Node<Item> next = oldest;
-
     }
 }
