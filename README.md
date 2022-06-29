@@ -1,5 +1,7 @@
 # Algorithms
 
+This part of the repository contains the basic algorithms and their respective unit tests.
+
 ## Elementary Sorting Techniques
 
 - [Bubble Sort](./src/main/java/ADT/Sort/BubbleSort)
@@ -22,7 +24,7 @@
 ## APIs
 
 - [Linked List](./src/main/java/ADT/API/LinkedList/LinkedList.java)
-- [Doubly Linked List](./src/main/java/ADT/API/LinkedList/DList.java) [WIP]
+- [Doubly Linked List](./src/main/java/ADT/API/LinkedList/DList.java)
 - [Stack](./src/main/java/ADT/API/Stack)
 - [Queue](./src/main/java/ADT/API/Queue)
 - [Bag](./src/main/java/ADT/API/Bag)
@@ -30,7 +32,7 @@
 ## Leetcode Solutions
 
 Below are some Leetode problems that are solved using Java. These are divided into easy, medium and hard problems for
-better understanding.
+better classification.
 
 Long way to go!
 
