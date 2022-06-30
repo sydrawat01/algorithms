@@ -133,4 +133,19 @@ public class DListTest {
         list.remove(list.findLast(3));
         assertEquals(list.toString(), "1, 2, 4, ");
     }
+
+    @Test
+    public void testDList12() throws APIException {
+        DList<Integer> list = new DList<>(1);
+        list.addAfter(2, 1);
+        list.addAfter(3,2);
+        list.addAfter(4,3);
+        list.remove(list.findLast(1));
+        list.remove(list.findFirst(4));
+        System.out.println(list.toString());
+//        list.remove(list.findFirst(2));
+//        list.remove(list.findLast(3));
+//        list.remove(list.findFirst(4));
+//        assertTrue(list.isEmpty());
+    }
 }
