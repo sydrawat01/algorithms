@@ -119,24 +119,25 @@ public class DList<Item> implements Iterable<Item> {
      */
     public void remove(Node del) {
         // if element to be removed is head
-        if (head == del){
-            if (size() == 1) {
-                head = null;
+            if (head == del){
+                if (size() == 1) {
+                    head = null;
+                }
+                else {
+                    head = del.next;
+                    head.prev = null;
+                }
             }
-            else {
-                head = del.next;
-                head.prev = null;
+            if (del.next != null) {
+                del.next.prev = del.prev;
             }
-        }
-        if (del.next != null) {
-            del.next.prev = del.prev;
-        }
-        if (del.prev != null) {
-            del.prev.next = del.next;
-        }
-        tail = del.prev;
-        del.prev = null;
-        count--;
+            if (del.prev != null) {
+                del.prev.next = del.next;
+            }
+            if (del.next == null)
+                tail = del.prev;
+            del.prev = null;
+            count--;
     }
 
     public Node findFirst(Item data) {
