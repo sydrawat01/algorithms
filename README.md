@@ -24,9 +24,10 @@ This part of the repository contains the basic algorithms and their respective u
 ## APIs
 
 - [Linked List](./src/main/java/ADT/API/LinkedList/LinkedList.java)
-- [Doubly Linked List](./src/main/java/ADT/API/LinkedList/DList.java)
+- [Doubly Linked List](./src/main/java/ADT/API/DoublyLinkedList)
 - [Stack](./src/main/java/ADT/API/Stack)
 - [Queue](./src/main/java/ADT/API/Queue)
+- [Queue as Doubly-linked list](./src/main/java/ADT/API/DoublyLinkedList/DLLQueue.java)
 - [Bag](./src/main/java/ADT/API/Bag)
 
 ## Leetcode Solutions
