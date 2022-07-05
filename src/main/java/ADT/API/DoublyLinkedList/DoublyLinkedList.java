@@ -129,7 +129,6 @@ public class DoublyLinkedList<Item> implements DoublyLinkedListAPI<Item> {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (Item i : this) sb.append(i).append(", ");
-//        sb.append("\b\b");
         return sb.toString();
     }
 
