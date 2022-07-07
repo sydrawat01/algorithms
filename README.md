@@ -20,6 +20,7 @@ This part of the repository contains the basic algorithms and their respective u
 - [LinkedList](./src/main/java/ADT/LinkedList)
 - [Stack](./src/main/java/ADT/Stack)
 - [Queue](./src/main/java/ADT/Queue)
+- [QuickFind](./src/main/java/ADT/UnionFind/QuickFindUF.java)
 
 ## APIs
 
