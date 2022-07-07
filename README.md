@@ -21,6 +21,8 @@ This part of the repository contains the basic algorithms and their respective u
 - [Stack](./src/main/java/ADT/Stack)
 - [Queue](./src/main/java/ADT/Queue)
 - [QuickFind](./src/main/java/ADT/UnionFind/QuickFindUF.java)
+- [QuickUnion](./src/main/java/ADT/UnionFind/QuickUnionUF.java) [WIP]
+- [Binary Search Tree](./src/main/java/ADT/BST/BinarySearchTree.java) [WIP]
 
 ## APIs
 
