@@ -35,7 +35,7 @@ public class QuickFindUF {
         count--;
     }
 
-    public int count() { return count; }
+    public int getCount() { return count; }
 
     /**
      * Validate that 'p' is a valid index
@@ -72,6 +72,6 @@ public class QuickFindUF {
         for( int i : id) {
             System.out.print(i + " ");
         }
-        System.out.println("\nNumber of connections: " + count);
+        System.out.println("\nNumber of connections: " + uf.getCount());
     }
 }

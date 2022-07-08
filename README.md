@@ -20,8 +20,9 @@ This part of the repository contains the basic algorithms and their respective u
 - [LinkedList](./src/main/java/ADT/LinkedList)
 - [Stack](./src/main/java/ADT/Stack)
 - [Queue](./src/main/java/ADT/Queue)
-- [QuickFind](./src/main/java/ADT/UnionFind/QuickFindUF.java)
-- [QuickUnion](./src/main/java/ADT/UnionFind/QuickUnionUF.java) [WIP]
+- [Quick Find](./src/main/java/ADT/UnionFind/QuickFindUF.java)
+- [Quick Union](./src/main/java/ADT/UnionFind/QuickUnionUF.java)
+- [Weighted Quick Union](./src/main/java/ADT/UnionFind/WeightedQuickUnionUF.java) [WIP]
 - [Binary Search Tree](./src/main/java/ADT/BST/BinarySearchTree.java) [WIP]
 
 ## APIs
