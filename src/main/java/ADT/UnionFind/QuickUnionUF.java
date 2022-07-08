@@ -1,5 +1,7 @@
 package ADT.UnionFind;
 
+import java.util.ArrayList;
+
 public class QuickUnionUF {
     public QuickUnionUF(int n) {
         count = n;
@@ -31,6 +33,14 @@ public class QuickUnionUF {
 
     public int getCount() { return count; }
 
+    public String toString() {
+        ArrayList<Integer> list = new ArrayList<>();
+        for( int i : parent) {
+            list.add(i);
+        }
+        return list.toString();
+    }
+
     private void validate(int p) {
         int n = parent.length;
         if (p < 0 || p >= n) {
@@ -39,22 +49,4 @@ public class QuickUnionUF {
     }
     private static int[] parent;
     private static int count;
-
-    public static void main(String[] args) {
-        QuickUnionUF uf = new QuickUnionUF(10);
-        System.out.println("Union (2,9)");
-        uf.union(2, 9);
-        System.out.println("Union (3,4)");
-        uf.union(3, 4);
-        System.out.println("Union (4,9)");
-        uf.union(4, 9);
-        System.out.println("Union (5,6)");
-        uf.union(5, 6);
-        System.out.println("Union (3,5)");
-        uf.union(3, 5);
-        for( int i : parent) {
-            System.out.print(i + " ");
-        }
-        System.out.println("\nNumber of connections: " + uf.getCount());
-    }
 }
