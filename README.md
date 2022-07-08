@@ -22,7 +22,7 @@ This part of the repository contains the basic algorithms and their respective u
 - [Queue](./src/main/java/ADT/Queue)
 - [Quick Find](./src/main/java/ADT/UnionFind/QuickFindUF.java)
 - [Quick Union](./src/main/java/ADT/UnionFind/QuickUnionUF.java)
-- [Weighted Quick Union](./src/main/java/ADT/UnionFind/WeightedQuickUnionUF.java) [WIP]
+- [Weighted Quick Union](./src/main/java/ADT/UnionFind/WeightedQuickUnionUF.java)
 - [Binary Search Tree](./src/main/java/ADT/BST/BinarySearchTree.java) [WIP]
 
 ## APIs
@@ -36,7 +36,7 @@ This part of the repository contains the basic algorithms and their respective u
 
 ## Leetcode Solutions
 
-Below are some Leetode problems that are solved using Java. These are divided into easy, medium and hard problems for
+Below are some LeetCode problems that are solved using Java. These are divided into easy, medium and hard problems for
 better classification.
 
 Long way to go!
