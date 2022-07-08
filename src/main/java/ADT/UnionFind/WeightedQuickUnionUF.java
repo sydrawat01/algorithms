@@ -31,7 +31,7 @@ public class WeightedQuickUnionUF {
             parent[rootP] = rootQ;
             size[rootQ] += size[rootP];
         } else {
-            parent[rootQ] = parent[rootP];
+            parent[rootQ] = rootP;
             size[rootP] += size[rootQ];
         }
         count--;
