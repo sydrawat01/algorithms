@@ -16,6 +16,12 @@ public class Helper implements HelperAPI {
         a[y] = temp;
     }
 
+    public void swap(Object[]a, int x, int y) {
+        Object swap = a[x];
+        a[x] = a[y];
+        a[y] = swap;
+    }
+
     public void printArray(int[] a) {
         System.out.print("[ ");
         for (int i : a) {

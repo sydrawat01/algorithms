@@ -1,5 +1,7 @@
 package ADT.Sort.Shuffling;
 
+import util.Helper;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -19,15 +21,11 @@ public class KnuthShuffle {
         for(int i=0; i<n; i++) {
             int r = random.nextInt(i+1);
             System.out.println("swap indices " + i + " and " + r);
-            swap(a, i, r);
+            helper.swap(a,i,r);
         }
     }
 
-    private static void swap(Object[] a, int i, int r) {
-        Object swap = a[r];
-        a[r] = a[i];
-        a[i] = swap;
-    }
+    static final Helper helper = new Helper();
 
     public static void main(String[] args) {
         Object[] a = new Object[10];
