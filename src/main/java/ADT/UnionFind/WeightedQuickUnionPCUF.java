@@ -2,8 +2,8 @@ package ADT.UnionFind;
 
 import java.util.ArrayList;
 
-public class WeightedQuickUnionUF {
-    public WeightedQuickUnionUF(int n) {
+public class WeightedQuickUnionPCUF {
+    public WeightedQuickUnionPCUF(int n) {
         count = n;
         parent = new int[n];
         size = new int[n];
@@ -14,15 +14,16 @@ public class WeightedQuickUnionUF {
     }
 
     public int find(int p) {
+        //FIXME
         validate(p);
-        while(p != parent[p])
+        while(p != parent[p]) {
+            parent[p] = parent[parent[p]];
             p = parent[p];
+        }
         return p;
     }
 
-    public boolean connected(int p, int q) {
-        return find(p) == find(q);
-    }
+    public boolean connected(int p, int q) { return find(p) == find(q); }
 
     public void union(int p, int q) {
         int rootP = find(p);
@@ -55,6 +56,7 @@ public class WeightedQuickUnionUF {
             throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n-1));
         }
     }
+
     private final int[] parent;
     private final int[] size;
     private int count;

@@ -47,6 +47,6 @@ public class QuickUnionUF {
             throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n-1));
         }
     }
-    private static int[] parent;
-    private static int count;
+    private final int[] parent;
+    private int count;
 }
