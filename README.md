@@ -11,6 +11,11 @@ This part of the repository contains the basic algorithms and their respective u
 - [Shell Sort](./src/main/java/ADT/Sort/ShellSort)
 - [Quick Sort](./src/main/java/ADT/Sort/QuickSort)
 
+## Linear Non-Sorting Techniques
+
+- [Knuth Shuffle](./src/main/java/ADT/Sort/Shuffling/KnuthShuffle.java)
+- [Quick Select](./src/main/java/ADT/Sort/Shuffling/QuickSelect.java) [WIP]
+
 ## ADT
 
 - [Binary Search](./src/main/java/ADT/BinarySearch/BinarySearch.java) [Iterative & Recursive]
@@ -23,6 +28,7 @@ This part of the repository contains the basic algorithms and their respective u
 - [Quick Find](./src/main/java/ADT/UnionFind/QuickFindUF.java)
 - [Quick Union](./src/main/java/ADT/UnionFind/QuickUnionUF.java)
 - [Weighted Quick Union](./src/main/java/ADT/UnionFind/WeightedQuickUnionUF.java)
+- [Weighted Quick Union with Path Compression](./src/main/java/ADT/UnionFind/WeightedQuickUnionPCUF.java)
 - [Binary Search Tree](./src/main/java/ADT/BST/BinarySearchTree.java) [WIP]
 
 ## APIs
