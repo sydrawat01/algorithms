@@ -1,37 +1,24 @@
 package util;
 
-public class Helper implements HelperAPI {
+public class Helper<T extends Comparable<T>> implements HelperAPI<T> {
 
-    public boolean less(int[] a, int x, int y) {
-        return a[x] < a[y];
-    }
-
-    public boolean more(int[] a, int x, int y) {
-        return a[x] > a[y];
-    }
-
-    public void swap(int[] a, int x, int y) {
-        int temp = a[x];
+    public void swap(T[] a, int x, int y) {
+        T temp = a[x];
         a[x] = a[y];
         a[y] = temp;
     }
 
-    public void swap(Object[]a, int x, int y) {
-        Object swap = a[x];
-        a[x] = a[y];
-        a[y] = swap;
+    public boolean less(T x, T y) {
+        if(x == y) return false; //optimization when reference is equal
+        return x.compareTo(y) < 0;
     }
 
-    public void printArray(int[] a) {
-        System.out.print("[ ");
-        for (int i : a) {
-            System.out.print(i + " ");
-        }
-        System.out.println("]");
+    public boolean more(T x, T y) {
+        return x.compareTo(y) > 0;
     }
 
-    public boolean sorted(int[] a) {
-        for (int i = 1; i < a.length; i++) if (more(a, i-1, i)) return false;
+    public boolean sorted(T[] a) {
+        for (int i = 1; i < a.length; i++) if (more(a[i-1], a[i])) return false;
         return true;
     }
 
