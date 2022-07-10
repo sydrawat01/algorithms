@@ -2,7 +2,7 @@ package ADT.Sort.QuickSort;
 
 import util.Helper;
 
-public class QuickSort {
+public class QuickSort<T extends Comparable<T>> {
 
     /**
      * Method to partition the array based on the pivot
@@ -11,18 +11,21 @@ public class QuickSort {
      * @param high the upper index of the array to be partitioned
      * @return the index of the partition within the array that is to be sorted
      */
-    public int partition(int[] arr, int low, int high) {
+    public int partition(T[] arr, int low, int high) {
 
-        int i = low, j = high;
+        int i = low, j = high+1;
         //pivot
-        int pivot = arr[low];
-        while (i < j) {
-            while (pivot >= arr[i])
-                i++;
-            while (pivot < arr[j])
-                j--;
-            if (i < j)
-                helper.swap(arr, i ,j);
+        T pivot = arr[low];
+        while (true) {
+            while (helper.less(arr[++i], pivot)) {
+                if (i == high) break;
+            }
+            while (helper.less(pivot, arr[--j])) {
+                if(j == low) break;
+            }
+            if (i >= j) break;
+
+            helper.swap(arr, i ,j);
         }
         helper.swap(arr, low, j);
         return j;
@@ -33,8 +36,9 @@ public class QuickSort {
      * @param a the array to be sorted
      * @param low lower index of that array which is to be sorted
      * @param high upper index of that array which is to be sorted
+     * @return the sorted array
      */
-    public int[] sort(int[]a, int low, int high) {
+    public T[] sort(T[] a, int low, int high) {
         if (low < high) {
             int pivot = partition(a, low, high);
             sort(a, low, pivot-1);
@@ -43,5 +47,5 @@ public class QuickSort {
         return a;
     }
 
-    final Helper helper = new Helper();
+    final Helper<T> helper = new Helper<>();
 }

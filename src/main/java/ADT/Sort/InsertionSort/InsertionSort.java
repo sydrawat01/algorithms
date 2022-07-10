@@ -2,7 +2,7 @@ package ADT.Sort.InsertionSort;
 
 import util.Helper;
 
-public class InsertionSort {
+public class InsertionSort<T extends Comparable<T>> {
     /**
      * Insertion Sort implementation
      * @param arr the array that is to be sorted
@@ -10,10 +10,10 @@ public class InsertionSort {
      * @param to ending index
      * @return the sorted array
      */
-    public int[] sort(int[] arr, int from, int to) {
+    public T[] sort(T[] arr, int from, int to) {
         for(int i = from+1; i<to; i++) {
             for(int j=i;j>from; j--) {
-                if(helper.less(arr, j, j-1)){
+                if(helper.less(arr[j], arr[j-1])){
                     helper.swap(arr, j, j-1);
                 } else break;
             }
@@ -28,10 +28,10 @@ public class InsertionSort {
      * @param to ending index
      * @return the sorted array
      */
-    public int[] descendingSort(int[] arr, int from, int to) {
+    public T[] descendingSort(T[] arr, int from, int to) {
         for(int i=from+1; i<to; i++) {
             for(int j=i; j>from; j--) {
-                if(helper.more(arr, j, j-1)) {
+                if(helper.more(arr[j], arr[j-1])) {
                     helper.swap(arr,j, j-1);
                 }
             }
@@ -39,5 +39,5 @@ public class InsertionSort {
         return arr;
     }
 
-    final Helper helper = new Helper();
+    final Helper<T> helper = new Helper<>();
 }
