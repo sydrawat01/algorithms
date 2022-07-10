@@ -7,7 +7,7 @@ This part of the repository contains the basic algorithms and their respective u
 - [Bubble Sort](./src/main/java/ADT/Sort/BubbleSort)
 - [Insertion Sort](./src/main/java/ADT/Sort/InsertionSort)
 - [Selection Sort](./src/main/java/ADT/Sort/SelectionSort)
-- [Merge Sort](./src/main/java/ADT/Sort/MergeSort)
+- [Merge Sort](./src/main/java/ADT/Sort/MergeSort) [WIP]
 - [Shell Sort](./src/main/java/ADT/Sort/ShellSort)
 - [Quick Sort](./src/main/java/ADT/Sort/QuickSort)
 
