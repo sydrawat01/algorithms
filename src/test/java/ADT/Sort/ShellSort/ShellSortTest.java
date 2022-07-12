@@ -2,6 +2,7 @@ package ADT.Sort.ShellSort;
 
 import org.junit.Test;
 import util.Helper;
+import util.Supplier;
 
 import static org.junit.Assert.assertTrue;
 
@@ -10,7 +11,7 @@ public class ShellSortTest {
     public void TestCase1() {
         ShellSort<Integer> ob = new ShellSort<>();
         Helper<Integer> helper = new Helper<>();
-        Integer[] arr = { 12, 11, 13, 5, 6 };
-        assertTrue(helper.sorted(ob.sort(arr)));
+        Supplier<Integer> xs = new Supplier<>(10);
+        assertTrue(helper.sorted(ob.sort(xs.supply())));
     }
 }
