@@ -71,11 +71,11 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> implements BST
             if (x.left == null) return x.right;
 
             Node t = x;
-            //FIXME
             x = min(t.right);
             x.right = deleteMin(t.right);
             x.left = t.left;
         }
+        x.size = 1 + size(x.left) + size(x.right);
         return x;
     }
 
@@ -152,6 +152,12 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> implements BST
                           SELECT
      ================================================
      */
+
+    /**
+     * Return the key of a given rank
+     * @param k the number of keys that are smaller than the key to be returned
+     * @return the key
+     */
     public Key select(int k) {
         if (k<0 || k>=size()) return null;
         Node x = select(root, k);
@@ -164,7 +170,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> implements BST
         if (t > k)
             return select(x.left, k);
         else if (t < k)
-            return select(x.right, k);
+            return select(x.right, k-t-1);
         else // if (t==k)
             return x;
     }
@@ -309,8 +315,8 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> implements BST
         bst.putAll(map);
 //        System.out.println(bst.get("A"));
 //        bst.delete("E");
-//        System.out.println(bst.rank("E"));
-//        System.out.println(bst.select(2));
+        System.out.println("Rank of E: " + bst.rank("E"));
+        System.out.println("Key that has 2 keys lesser than itself: " + bst.select(2));
         System.out.println("Floor of G: " + bst.floor("G"));
         System.out.println("Floor of D: " + bst.floor("D"));
         //FIXME: Ceiling of Q should be R
