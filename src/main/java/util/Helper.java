@@ -17,6 +17,8 @@ public class Helper<T extends Comparable<T>> implements HelperAPI<T> {
         return x.compareTo(y) > 0;
     }
 
+    public boolean equal(T x, T y) { return x.compareTo(y) == 0; }
+
     public boolean sorted(T[] a) {
         for (int i = 1; i < a.length; i++) if (more(a[i-1], a[i])) return false;
         return true;

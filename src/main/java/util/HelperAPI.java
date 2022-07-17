@@ -22,6 +22,14 @@ public interface HelperAPI<T extends Comparable<T>> {
     boolean more(T x, T y);
 
     /**
+     * Utility method to return true if a[x] == a[y]
+     * @param x comparison index 1 in a
+     * @param y comparison index 2 in a
+     * @return true if x == y, false otherwise
+     */
+    boolean equal(T x, T y);
+
+    /**
      * Utility method to help swap two numbers
      * @param a the array we are performing sort on
      * @param x the index that needs to be swapped
