@@ -1,5 +1,6 @@
 package ADT.Sort.QuickSort;
 
+import ADT.Sort.InsertionSort.InsertionSort;
 import util.Helper;
 
 public class QuickSort<T extends Comparable<T>> {
@@ -31,6 +32,11 @@ public class QuickSort<T extends Comparable<T>> {
         return j;
     }
 
+    public T[] sort(T[] a) {
+        // TODO typically do a shuffle here
+        return sort(a, 0, a.length-1);
+    }
+
     /**
      * Method to sort an array using QuickSort
      * @param a the array to be sorted
@@ -39,6 +45,9 @@ public class QuickSort<T extends Comparable<T>> {
      * @return the sorted array
      */
     public T[] sort(T[] a, int low, int high) {
+        if (high <= low + helper.cutoff()) {
+            a = insertionSort.sort(a, low, high);
+        }
         if (low < high) {
             int pivot = partition(a, low, high);
             sort(a, low, pivot-1);
@@ -48,4 +57,5 @@ public class QuickSort<T extends Comparable<T>> {
     }
 
     final Helper<T> helper = new Helper<>();
+    final InsertionSort<T> insertionSort = new InsertionSort<>();
 }
