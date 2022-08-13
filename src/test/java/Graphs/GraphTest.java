@@ -2,6 +2,8 @@ package Graphs;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class GraphTest {
     @Test
     public void testGraph1() {
@@ -15,6 +17,7 @@ public class GraphTest {
         G.addEdge(3,4);
         G.addEdge(4,5);
         G.addEdge(4,6);
-        System.out.println(G.toString());
+        assertEquals(G.degree(4), 3);
+        assertEquals(G.degree(0), 4);
     }
 }
