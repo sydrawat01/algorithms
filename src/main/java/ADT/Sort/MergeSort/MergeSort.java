@@ -15,12 +15,12 @@ public class MergeSort<T extends Comparable<T>> {
     }
 
     private void merge(T[] aux, T[] a, int lo, int mid, int hi) {
-        //FIXME
+        //TODO: Implementation pending
         //END
     }
 
     public T[] sort(T[] a, int from, int to) {
-        //FIXME
+        //TODO: Implementation pending
         //END
         return a;
     }

@@ -6,7 +6,9 @@ import java.util.*;
 public class Bag<Item> implements BagAPI<Item>{
 
     public void add(Item item) {
-        if (full()) grow(items, 2 * capacity());
+        assert items != null;
+        if (full())
+            grow(items, 2 * capacity());
         items[count++] = item;
     }
 
@@ -18,11 +20,41 @@ public class Bag<Item> implements BagAPI<Item>{
         return count;
     }
 
+    public void clear() {
+        count = 0;
+    }
+
+    public boolean contains(Item item) {
+        for (Item i : items) {
+            if (i != null && i.equals(item))
+                return true;
+        }
+        return false;
+    }
+
+//    @Override
+    public int multiplicity(Item item) {
+        int result = 0;
+        if (isEmpty()) return 0;
+        for (Item i : items) {
+            if (i != null && i.equals(item))
+                result++;
+        }
+        return result;
+    }
+
     public Iterator<Item> iterator() {
-        return Arrays.asList(Arrays.copyOf(items,count)).iterator();
+        assert items != null; // Should be not-null any time after construction.
+        // NOTE: there is no Java-defined array iterator.
+        return Arrays.asList(asArray()).iterator();
+    }
+
+    public Item[] asArray() {
+        return Arrays.copyOf(items, count);
     }
 
     public Bag() {
+        //noinspection unchecked
         grow((Item[]) new Object[0], 32);
     }
 
@@ -31,6 +63,7 @@ public class Bag<Item> implements BagAPI<Item>{
     }
 
     private int capacity() {
+        assert items != null; // Should be not-null any time after construction.
         return items.length;
     }
 
@@ -38,7 +71,17 @@ public class Bag<Item> implements BagAPI<Item>{
         return size() == capacity();
     }
 
+    /**
+     * This fairly primitive grow method takes a T array called "from",
+     * instantiates a new array of the given size,
+     * copies all the elements of from into the start of the resulting array,
+     * then returns the result.
+     *
+     * @param from the source array
+     * @param size the size of the new array
+     */
     private static <T> T[] growFrom(T[] from, int size) {
+        //noinspection unchecked
         T[] result = (T[]) new Object[size];
         System.arraycopy(from , 0 , result, 0, from.length);
         return result;
@@ -47,7 +90,7 @@ public class Bag<Item> implements BagAPI<Item>{
     @Override
     public String toString() {
         return "Bag{" +
-                "items=" + Arrays.toString(items) +
+                "items=" + Arrays.toString(asArray()) +
                 ", count=" + count +
                 '}';
     }

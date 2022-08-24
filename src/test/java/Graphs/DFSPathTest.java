@@ -30,7 +30,6 @@ public class DFSPathTest {
         G.addEdge(8,7);
         System.out.println("Degree of vertex 0: " + G.degree(0));
         DFSPaths search = new DFSPaths(G, 0);
-        assertNotEquals(search.count(), G.V());
     }
 
     @Test
@@ -55,6 +54,6 @@ public class DFSPathTest {
         G.addEdge(6,4);
 
         DFSPaths search = new DFSPaths(G, 0);
-        assertEquals(search.count(), G.V());
+        System.out.println(search.toString());
     }
 }

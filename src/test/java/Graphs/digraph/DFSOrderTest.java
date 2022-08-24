@@ -20,13 +20,25 @@ public class DFSOrderTest {
         digraph.addEdge(6,4);
 
         DFSOrder order = new DFSOrder(digraph);
-        System.out.println(DFSOrderString(order));
+        System.out.println("rev post-order: " + revPostOrder(order));
+        System.out.println("post-order: " + postOrder(order));
 
     }
 
-    private String DFSOrderString(DFSOrder reverseOrder) {
+    private String revPostOrder(DFSOrder reverseOrder) {
         StringBuilder sb = new StringBuilder();
         for(int v : reverseOrder.reversePostOrder()) {
+            sb.insert(0, v + " -> ");
+        }
+
+        sb.delete(sb.length() - 4, sb.length());
+
+        return sb.toString();
+    }
+
+    private String postOrder(DFSOrder postOrder) {
+        StringBuilder sb = new StringBuilder();
+        for(int v : postOrder.postOrder()) {
             sb.insert(0, v + " -> ");
         }
 

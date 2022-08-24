@@ -2,8 +2,6 @@ package ADT.Stack;
 
 import ADT.LinkedList.Node;
 
-import static org.junit.Assert.assertEquals;
-
 public class Stack implements LIFO {
     Node top;
 
