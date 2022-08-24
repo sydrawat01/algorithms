@@ -1,7 +1,7 @@
 package ADT.LinkedList;
 
 public class LinkedList {
-    Node head;
+    public Node head;
 
     // 1. Insert at the front of LinkedList
     public void insertFront(int value) {
@@ -151,45 +151,32 @@ public class LinkedList {
         return slow.data;
     }
 
-    // 13. Count the occurence of an integer in a LinkedList
-    public int countOccurence(Node head, int key) {
+    // 13. Count the occurrence of an integer in a LinkedList
+    public int countOccurrence(Node head, int key) {
         if (head == null)
             return -1;
         if (head.data == key)
-            return 1 + countOccurence(head.getNext(), key);
-        return countOccurence(head.getNext(), key);
+            return 1 + countOccurrence(head.getNext(), key);
+        return countOccurrence(head.getNext(), key);
     }
 
     // 14. Loop detection in LinkedList
     public boolean loopDetection(Node head) {
-        // Implementation pending
+        // TODO: Implementation pending
         // 14.1 Floyd's Cycle detection algorithm
         return false;
     }
 
     // 0. Print the LinkedList
-    public void printList() {
+    @Override
+    public String toString() {
         Node ptr = head;
+        StringBuilder ll = new StringBuilder();
         while (ptr != null) {
-            System.out.print(ptr.data + " -> ");
+            ll.append(ptr.data).append(" -> ");
             ptr = ptr.getNext();
         }
-        System.out.println("null");
-    }
-
-    public static void main(String[] args) {
-        System.out.println();
-        LinkedList ll = new LinkedList();
-        Node p2 = new Node(5, null);
-        Node p1 = new Node(3, p2);
-        ll.head = new Node(2, p1);
-        ll.insertFront(1);
-        ll.insertAfter(p1, 4);
-        ll.insertEnd(6);
-        ll.deleteNode(5);
-        ll.deleteNodeAtPosition(5);
-        ll.printList();
-        System.out.println("Linked List length (recursive) = " + ll.linkedListLength(ll.head));
-        System.out.println("Linked List length (iterative) = " + ll.calcLength(ll.head));
+        ll.append("null");
+        return ll.toString();
     }
 }
