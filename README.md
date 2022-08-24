@@ -1,4 +1,4 @@
-# Algorithms
+# Algorithms [![CircleCI](https://dl.circleci.com/status-badge/img/gh/sydrawat01/algorithms/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/sydrawat01/algorithms/tree/master)
 
 Basic algorithms, Data Structures and Graphs. Also includes LeetCode problems and their solutions.
 
