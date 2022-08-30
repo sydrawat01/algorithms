@@ -64,10 +64,12 @@ Long way to go!
 - [x] [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) : [Solution](./src/main/java/leetcode/solutions/solution35)
 - [x] [58. Length of Last Word](https://leetcode.com/problems/length-of-last-word/) : [Solution](./src/main/java/leetcode/solutions/solution58)
 - [x] [83. Remove Duplicates from a Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) : [Solution](./src/main/java/leetcode/solutions/solution83)
+- [x] [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) : [Solution](./src/main/java/leetcode/solutions/solution206)
 - [x] [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/): [Solution](./src/main/java/leetcode/solutions/solution234)
 - [x] [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) : [Solution](./src/main/java/leetcode/solutions/solution287)
 - [x] [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) : [Solution](./src/main/java/leetcode/solutions/solution442)
 - [x] [1342. Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) : [Solution](./src/main/java/leetcode/solutions/solution1342)
+- [x] [1356. Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/) : [Solution](./src/main/java/leetcode/solutions/solution1356)
 - [x] [1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/) : [Solution](./src/main/java/leetcode/solutions/solution1365)
 - [x] [2062. Count Vowel Substrings of a String](https://leetcode.com/problems/count-vowel-substrings-of-a-string/) : [Solution](./src/main/java/leetcode/solutions/solution2062)
 
